@@ -17,7 +17,7 @@ function Home({ setSelectedPage }: Props) {
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       <motion.div
-        className="mx-auto w-5/6 items-center justify-center md:h-5/6"
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         <div className="z-10 mt-32 bd:basis-3/5">
@@ -66,8 +66,11 @@ function Home({ setSelectedPage }: Props) {
             </AnchorLink>
           </motion.div>
         </div>
-        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16">
-          <img alt="home-page-graphic" src={HomePageGraphic} />
+        <div
+          className="flex basis-3/5 justify-center md:z-10
+              md:ml-40 md:mt-16 md:justify-items-end"
+        >
+          <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
       </motion.div>
       {isAboveMediumScreens && (
