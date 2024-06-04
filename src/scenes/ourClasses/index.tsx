@@ -43,6 +43,7 @@ const ourClasses: Array<OurClassType> = [
     image: image6,
   },
 ];
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
